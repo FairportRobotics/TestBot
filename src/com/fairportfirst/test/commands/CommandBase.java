@@ -2,6 +2,7 @@ package com.fairportfirst.test.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import com.fairportfirst.test.OI;
+import com.fairportfirst.test.subsystems.ChrisSubsystem;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
@@ -13,6 +14,7 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     // Create a single static instance of all of your subsystems
+    public static ChrisSubsystem chrisSubsystem = new ChrisSubsystem();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
