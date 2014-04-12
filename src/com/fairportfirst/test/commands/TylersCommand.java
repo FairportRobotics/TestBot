@@ -13,6 +13,7 @@ public class TylersCommand extends CommandBase {
     public TylersCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+        requires(tylerSubsystem);
     }
 
     // Called just before this Command runs the first time
@@ -21,6 +22,7 @@ public class TylersCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        tylerSubsystem.drive(1);
     }
 
     // Make this return true when this Command no longer needs to run execute()
