@@ -1,8 +1,6 @@
 package com.fairportfirst.test.commands;
 
-import com.fairportfirst.test.subsystems.TylersSubsystem;
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import com.fairportfirst.test.OI;
 
 /**
@@ -15,7 +13,6 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     // Create a single static instance of all of your subsystems
-    public static TylersSubsystem tylerSubsystem = new TylersSubsystem();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
@@ -26,7 +23,6 @@ public abstract class CommandBase extends Command {
         oi = new OI();
 
         // Show what command your subsystem is running on the SmartDashboard
-        SmartDashboard.putData(tylerSubsystem);
     }
 
     public CommandBase(String name) {
